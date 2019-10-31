@@ -8,7 +8,7 @@
              $email = $_POST["email"];
               $komentar = $_POST["komentar"];
                $conn=mysqli_connect ("localhost","root","")    or die ("koneksi gagal");
-                mysqli_select_db("faruq",$conn);
+                mysqli_select_db("php",$conn);
                 echo "Nama     : $nama <br>";
                 echo "Email    : $email <br>"; 
                 echo "Komentar : $komentar <br>"; 
