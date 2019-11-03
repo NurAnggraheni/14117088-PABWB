@@ -4,7 +4,7 @@
      </HEAD> 
      <BODY>
           <h1>Searching Buku Tamu untuk database MySQL</h1> 
-              <form action="hasilsearch.php" method="GET"> 
+              <form action="hasilsearch.php" method="post"> 
                <select name="kolom">
                <option value="nama">nama</option> 
                <option value="email">email</option>

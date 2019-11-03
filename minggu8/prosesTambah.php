@@ -9,13 +9,13 @@
              $nama = $_POST["nama"]; 
              $email = $_POST["email"];
               $komentar = $_POST["komentar"];
-               $conn=mysqli_connect ("localhost","root","","buku_tamu")    or die ("koneksi gagal");
+               $conn=mysqli_connect ("localhost","root","")    or die ("koneksi gagal");
                 mysqli_select_db($conn,"buku_tamu");
                 echo "Nama     : $nama <br>";
                 echo "Email    : $email <br>"; 
                 echo "Komentar : $komentar <br>"; 
                 $sqlstr="INSERT INTO bukutamu ('nama','email','komentar') VALUES ('$nama','$email','$komentar')";
-                $hasil = mysqli_query($sqlstr);
+                $hasil = mysqli_query($conn,$sqlstr);
                 echo "Simpan bukutamu berhasil dilakukan"; ?> 
          </BODY> 
 </HTML

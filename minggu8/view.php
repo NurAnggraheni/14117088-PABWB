@@ -17,6 +17,9 @@
        echo "<br>";
        echo "Komentar : ";        
        echo $baris[2];
-         $a++;
+       echo "<br>";
+       $a++;
+        
      } 
+     
 ?> 

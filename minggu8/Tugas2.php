@@ -4,9 +4,9 @@ $kolom=$_POST['kolom'];
 $cari=$_POST['cari'];
 
    $conn=mysqli_connect("localhost","root",""); 
-   mysqli_select_db($conn,"buku_tamu"); 
+   mysqli_select_db($conn,"mhs"); 
 
-   $hasil=mysqli_query($conn,"select * from bukutamu where  $kolom like '%$cari%'");  
+   $hasil=mysqli_query($conn,"select * from mahasiswa where  $kolom like '%$cari%'");  
    $jumlah=mysqli_num_rows($hasil);
 
    echo "<br>";  
@@ -14,16 +14,19 @@ $cari=$_POST['cari'];
    echo "<br>"; 
 
    while($baris=mysqli_fetch_array($hasil)) {
-           echo "Nama : "; 
+           echo "NRP : "; 
            echo $baris[0];  
            echo "<br>"; 
 
-           echo "Email : ";  
+           echo "Nama : ";  
            echo $baris[1]; 
            echo "<br>"; 
 
-           echo "Komentar :"; 
+           echo "Alamat :"; 
            echo $baris[2];
+
+           echo "Id Jurusan :"; 
+           echo $baris[3];
            }
 
  
